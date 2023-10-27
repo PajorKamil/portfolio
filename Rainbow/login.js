@@ -11,7 +11,7 @@
           for (var i=0; i<users.length; i++)
                   if (users[i][0]==user)
                           if (users[i][1]==pass) {
-                                  form.action="/Rainbow/home.html";
+                                  form.action="https://pajorkamil.github.io/portfolio/Rainbow/home.html";
                                   return true;
                           } else {
                                   alert("" +user+ ", wrong password");
