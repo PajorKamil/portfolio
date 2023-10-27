@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+:root {
+    --clr-foreground: linear-gradient(-45deg, #82412d, #832247, #11536b, #11615b);
+    --clr-background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    --clr-white: white;
+    --clr-dark: black;
+    --clr-calendarbg: rgba(255, 255, 255, 0.2);
+}
+
+.light-theme {
+    --clr-background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+}
+
+.dark-theme {
+    --clr-foreground: linear-gradient(-45deg, #82412d, #832247, #11536b, #11615b);
+}
+body{
+	background: var(--clr-background);
+	background-size: 200% 1%;
+	animation: gradient 15s ease infinite;
+    font-family: 'Open Sans Condensed', sans-serif;
+     box-sizing: border-box;
+     text-decoration: none;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.toggle {
+    position: absolute; 
+    top: 2%; 
+    border: 0; 
+    right: 5%;
+    color: var(--clr-white);
+    font-size: 35px;
+    cursor: pointer;
+    display: block;
+    transition: 250ms;
+}
+
+.toggle:hover {
+    transform: translateY(-5px);
+}
+
+.toggle ion-icon.open, 
+.toggle.active ion-icon.close {
+    display: block;
+}
+
+.toggle.active ion-icon.open, 
+.toggle ion-icon.close {
+    display: none;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--clr-white);
+    text-shadow: 10px black;
+    font-size: 20px;
+}
+
+.ani {
+    display: inline-block;
+    transition: 250ms;
+    padding: 2px;
+}
+
+.ani:hover {
+    transform: translateY(-10px);
+}
+
+.dropdown-content {
+    visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-10px);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;  
+  text-decoration: none;  
+}
+
+.dropdown:focus .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s; 
+}
+
+.calendar a,
+.log-out a {
+    text-decoration: none;
+    color: var(--clr-white);
+    transition: 250ms;
+}
+.calendar,
+.log-out {
+    color: var(--clr-white);
+    text-decoration: none;
+    transition: 250ms;
+}
+
+.calendar:hover,
+.log-out:hover {
+    transform: translateY(-5px);
+    transition-delay: 0s, 0s, 0.3s; 
+}
+
+.dark-mode-toggle {
+    color: var(--clr-white);
+    text-decoration: none;
+    transition: 250ms;
+}
+
+.dark-mode-toggle:hover {
+    transform: translateY(-5px);
+    transition: 250ms;
+}
+
+.calendarclock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    transition: 250ms;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    transition: 250ms;
+}
+
+.clock-time,
+.clock-ampm {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 75px;
+    color: var(--clr-white);
+    transition: 250ms;
+}
+.clock-time {
+    font-size: 110px;
+    transition: 250ms;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    overflow: hidden;
+    transition: 250ms;
+}
+
+.box {
+    position: relative;
+    z-index: 1000;
+    transition: 250ms;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms;
+
+}
+
+#dycalendar {
+    width: 100%;
+    padding: 20px;
+}
+
+#dycalendar table {
+    width: 100%;
+    margin-top: 40px;
+    border-spacing: 5px;
+}
+
+#dycalendar table tr:nth-child(1) td{
+    background: var(--clr-calendarbg);
+    color: var(--clr-white);
+    border-radius: 4px;
+    font-weight: 600;
+
+}
+
+#dycalendar table td{
+    color: var(--clr-white);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.5s ease-out;
+}
+
+.dycalendar-prev-next-btn.next-btn,
+.dycalendar-prev-next-btn.prev-btn {
+    transition: all 0.5s ease-out;
+}
+
+#dycalendar table td:hover,
+.dycalendar-prev-next-btn.prev-btn:hover,
+.dycalendar-prev-next-btn.next-btn:hover {
+    background: var(--clr-white) !important;
+    color: var(--clr-dark) !important;
+    animation-duration: 1s;
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+    background: var(--clr-calendarbg) !important;
+    color: var(--clr-white) !important;
+} 
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn {
+    background: var(--clr-calendarbg);
+    color: var(--clr-white);
+    width: 44px;
+    height: 38px;
+    left: 4px !important;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn {
+    background: var(--clr-calendarbg);
+    color: var(--clr-white);
+    width: 44px;
+    height: 38px;
+    right: 4px !important;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: 250ms;
+    animation-duration: 1s;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year {
+    color: var(--clr-white);
+    font-size: 1.5em;
+    font-weight: 600;
+    transition: 250ms;
+    animation-duration: 1s;
+}
+
+.darkmode {
+        background: var(--clr-foreground);
+        background-size: 200% 1%;
+        animation: gradient 15s ease infinite;
+        font-family: 'Open Sans Condensed', sans-serif;
+        box-sizing: border-box;
+        text-decoration: none;
+        overflow: hidden;
+        --clr-white:black;
+        transition: 250ms;
+        --clr-dark:white;
+        --clr-calendarbg: rgba(255, 255, 255, 0.1)
+}

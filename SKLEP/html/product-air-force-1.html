@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <script src="../js/hamburger.js" defer></script>
+    <script src="../js/img.js" defer></script>
+    <title>HypeStep</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../html/index.html"><img src="../images/logo2.png" class="logo-img"></a>
+        </div>
+        <nav>
+            <ul class="desktop">
+                <li><a href="../html/products.html">Products</a></li>
+                <li><a href="#">Sales</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#"><img src="../images/shopping-bag.png" class="shopping-bag"></a></li>
+            </ul>
+            <ul class="mobile">
+                <li class="li-hamburger"><img src="../images/hamburger.png" class="hamburger"></li>
+                <li class="mobile-li active"><a href="../html/products.html">Products</a></li>
+                <li class="mobile-li active"><a href="#">Sales</a></li>
+                <li class="mobile-li active"><a href="#">Account</a></li>
+                <li class="mobile-li active"><a href="#"><img src="../images/shopping-bag.png" class="shopping-bag"></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <div class="product-card">
+            <div class="img">
+                <img src="../images/air force 1.png" alt="" id="img1-1" onmouseover="zmienZdane(1)">
+                <img src="../images/air force 1 - 1.png" alt="" id="img2-1" onmouseover="zmienZdane(2)">
+                <img src="../images/air force 1 - 2.png" alt="" id="img3-1" onmouseover="zmienZdane(3)">
+                <img src="../images/air force 1.png" alt="" id="imgmain">
+                <img src="" alt="" id="img2-2">
+                <img src="" alt="" id="img3-2">
+                <div class="opis">
+                    <p id="name">Nike Air Force 1</p>
+                       <p id="price">Price: 138$</p>
+                       <p id="size">Size: <select name="size" class="size"><option value="38">38</option><option value="39">39</option></select></p>
+                </div>
+            </div>
+        </div>
+        <div class="opinions">
+            
+        </div>
+        <br><br><br>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>

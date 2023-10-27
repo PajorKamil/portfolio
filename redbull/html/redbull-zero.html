@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <script src="../js/scripts.js" defer></script>
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle">#</div>
+            <ul class="menu">
+                <li><a href="../html/index.html">Home</a></li>
+                <li><a class="a-active" href="../html/products.html">Products</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/stores.html">Stores</a></li>
+                <li><a href="../html/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="../pictures/RedBullEnergyDrink.svg.png">
+    </header>
+    <section>
+        <div class="section-header">
+            <div class="container">
+                <div class="img-product">
+                    <img src="../pictures/ZERO.webp">
+                </div>
+                <div class="desc-product">
+                    <h2>REDBULL ZERO</h2>
+                    <p>Red Bull Energy Drink is appreciated worldwide by top athletes, busy professionals, university students and travellers on long journeys.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-main">
+            <div class="h1-ingredients reveal">Ingredients</div>
+            <div class="fourpack reveal">
+                <img src="../pictures/REDBULL ZERO 4PACK.webp">
+            </div>
+    
+            <div class="section-div reveal">
+                <div style="display: flex; justify-content: center;">
+                    <div class="ingredients">
+                        <h1 onclick="pokazOpis(1)">Caffeine</h1>
+                        <p class="ingredients-desc" id="desc-1" style="display: none;">Caffeine was well known by ancient civilisations. They consumed it from natural sources like tea, coffee, cacao beans and cola nuts and appreciated its stimulating effects on the human body.</p>
+                    </div>
+                </div>
+                
+                <div class="ingredients">
+                    <h1 onclick="pokazOpis(2)">Taurine</h1>
+                    <p class="ingredients-desc" id="desc-2" style="display: none;">Taurine is an amino acid, naturally occurring in the human body and present in the daily diet. It is involved in a wide range of biological processes.</p>
+                </div>
+                <div class="ingredients">
+                    <h1 onclick="pokazOpis(3)">Water</h1>
+                    <p class="ingredients-desc" id="desc-3" style="display: none;">Water is a main ingredient of Red Bull.</p>
+                </div>
+                <div class="ingredients">
+                    <h1 onclick="pokazOpis(4)">B-group vitamins</h1>
+                    <p class="ingredients-desc" id="desc-4" style="display: none;">Vitamins are essential micronutrients that are required for maintaining normal body functions.</p>
+                </div>
+                <div class="ingredients">
+                    <h1 onclick="pokazOpis(5)">Sucralose & Acesulfame K</h1>
+                    <p class="ingredients-desc" id="desc-5" style="display: none;">Sucralose and Acesulfame K are among the most-tested and most-used sugar substitutes worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="https://www.facebook.com/RedBull/"><img src="../pictures/facebook.svg"><p>Facebook</p></a></li>
+            <li><a href="https://www.instagram.com/redbull/"><img src="../pictures/instagram.svg"><p>Instagram</p></a></li>
+            <li><a href="https://twitter.com/redbullracing/"><img src="../pictures/twitter.svg"><p>Twitter</p></a></li>
+            <li><a href="https://www.tiktok.com/@redbull"><img src="../pictures/tiktok.svg"><p>Tiktok</p></a></li>
+            <li><a href="https://www.youtube.com/channel/UCblfuW_4rakIf2h6aqANefA"><img src="../pictures/youtube.svg"><p>Youtube</p></a></li>
+        </ul>
+    </footer>
+</body>
+</html>

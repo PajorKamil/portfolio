@@ -1,0 +1,395 @@
+@font-face {
+    font-family: Fira;
+    src: url(../portfolio/FiraSans-Regular.ttf);
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Fira;
+    color: black;
+    -webkit-user-drag: none;
+    transition: ease 200ms;
+}
+
+body {
+    background-color: white
+}
+
+.logo > img {
+    width: 30px;
+}
+
+.logo {
+    cursor: pointer;
+    color: gold;
+    transition: ease-in-out 300ms;
+    margin-left: 90px;
+    font-size: 25px;
+}
+
+.logo > span {
+    transition: ease-in-out 300ms;
+}
+
+.logo:hover > span {
+    color: gold;
+}
+
+.logo:hover {
+    color: black;
+}
+
+.logo:active > span{
+    color: black;
+}
+
+nav {
+    position: fixed;
+    width: 100% ;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    font-size: 20px;
+    margin-right: 80px;
+    z-index: 1000;
+    color: black;
+}
+
+nav > p {
+    margin: 20px;
+}
+
+nav > .desktop{
+    margin-right: 50px;
+}
+
+nav > ul, footer > ul{
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+nav > ul > .li, footer > ul > li{
+    margin: 10px;
+    transition: ease-in-out 200ms;
+}
+
+nav > ul > .li> a, footer > ul > li > a {
+    text-decoration: none;
+    color: black
+} 
+
+nav > ul > .li:hover, footer > ul > li:hover {
+    transform: translateY(-10px);
+} 
+
+.head > h1{
+    font-size: 40px;
+}
+
+.head > h1 > span {
+    color: gold;
+    font-size: 60px;
+}
+
+.head {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: opacity 1s ease;
+}
+
+.about {
+    display: none;
+    opacity: 0%;
+}
+
+.head > img {
+    width: 400px;
+}
+
+.in-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+}
+
+.in-projects > img {
+    width: 800px;
+}
+
+.opis {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+}
+
+.opis > #nazwa {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.opis > #nazwa > span {
+    font-size: 15px;
+    color: gray;
+    font-weight: 100;
+}
+
+.opis > #opis {
+    width: 500px;
+    font-size: 25px;
+    word-wrap: normal;
+}
+
+.opis > #opis > a{
+    font-size: 20px;
+    text-align: end;
+    text-decoration: none;
+    font-weight: 700;
+    transition: ease 300ms;
+}
+
+.opis > #opis > a > span{
+    color: gold;
+}
+
+.opis > #opis > a:hover{
+    color: gray;
+}
+
+footer {
+    padding: 50px;
+}
+
+footer > ul > li > a {
+    font-weight: 700;
+}
+
+footer > ul{
+    margin-left: 22px;
+}
+
+footer > h1 > img {
+    width: 40px;
+}
+
+#aboutpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    width: 60%;
+    text-align: left;
+}
+
+.right {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+}
+
+.right > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile {
+    display: none;
+}
+
+.hamburger {
+    width: 20px;
+    height: 20px;
+}
+
+.li-hamburger {
+    cursor: pointer;
+}
+
+.li-hamburger:hover > .hamburger{
+    transform: scale(0.7);
+}
+
+.active {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .head {
+        height: 500px;
+    }
+
+    .head > img {
+        width: 200px;
+    }
+
+    .head > h1 {
+        font-size: 20px;
+    }
+    .head > h1 > span {
+        font-size: 40px;
+    }
+
+    .in-projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 200px;
+    }
+    
+    .in-projects > img {
+        width: 500px;
+    }
+    
+    .opis {
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 250px;
+    }
+    
+    .opis > #nazwa {
+        font-size: 45px;
+        font-weight: 700;
+    }
+    
+    .opis > #nazwa > span {
+        font-size: 15px;
+        color: gray;
+        font-weight: 100;
+    }
+    
+    .opis > #opis {
+        width: 300px;
+        font-size: 25px;
+        word-wrap: normal;
+    }
+    
+    .opis > #opis > a{
+        font-size: 20px;
+        text-align: end;
+        text-decoration: none;
+        font-weight: 700;
+        transition: ease 300ms;
+    }
+    
+    .opis > #opis > a > span{
+        color: gold;
+    }
+    
+    .opis > #opis > a:hover{
+        color: gray;
+    }
+    
+  }
+
+  @media screen and (max-width: 420px) {
+    .head {
+        height: 800px;
+        flex-direction: column;
+    }
+
+    .head > img {
+        width: 200px;
+    }
+
+    .in-projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    
+    .in-projects > img {
+        width: 300px;
+    }
+    
+    .opis {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 250px;
+    }
+    
+    .opis > #nazwa {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    
+    .opis > #nazwa > span {
+        font-size: 15px;
+        color: gray;
+        font-weight: 100;
+    }
+    
+    .opis > #opis {
+        width: 150px;
+        font-size: 10px;
+        word-wrap: normal;
+    }
+    
+    .opis > #opis > a{
+        font-size: 10px;
+        text-align: end;
+        text-decoration: none;
+        font-weight: 700;
+        transition: ease 300ms;
+    }
+    
+    .opis > #opis > a > span{
+        color: gold;
+    }
+    
+    .opis > #opis > a:hover{
+        color: gray;
+    }
+    
+    .logo {
+        font-size: 15px;
+        margin-left: 40px;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        position: absolute;
+        font-size: 10px;
+        top: 5px;
+        right: 20px;
+        background-color: white;
+        border-radius: 0px 0px 10px 10px;
+        width: 57px;
+    }
+
+    .mobile > li{
+        margin: 10px;
+    }
+
+    .desktop {
+        display: none;
+    }
+  }

@@ -1,0 +1,96 @@
+@font-face {
+    font-family: Halton;
+    src: url(../css/Halton\ light.otf);
+  }
+
+  @font-face {
+    font-family: Library;
+    src: url(../css/Library\ 3\ am.otf);
+  }
+
+* {
+    font-family: Halton;
+    -webkit-user-drag: none;
+}
+
+
+body {
+    background-color: #848482;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.product-card {
+    width: 980px;
+    height: 470px;
+    background-color: #D4AF37;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.img {
+    display: grid; 
+    grid-template-columns: 100px 500px 360px; 
+    grid-template-rows: 150px 150px 150px; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+    "img1-1 img1-2 opis"
+    "img2-1 img1-2 opis"
+    "img3-1 img1-2 opis"; 
+}
+
+.img-active {
+    filter: brightness(80%);
+}
+
+#img1-1 {
+    background-color: white;
+    grid-area: img1-1;
+    width: 100px;
+    height: 150px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+#img2-1 {
+    background-color: white;
+    grid-area: img2-1;
+    width: 100px;
+    height: 150px;
+    object-fit:contain;
+    cursor: pointer;
+}
+
+#img3-1 {
+    background-color: white;
+    grid-area: img3-1;
+    width: 100px;
+    height: 150px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+#imgmain{
+    background-color: white;
+    grid-area: img1-2;
+    width: 500px;
+    height: 470px;
+    object-fit: contain;
+    
+}
+
+.opis {
+    padding-left: 20px;
+    background-color: white;
+    grid-area: opis;
+    display: flex;
+    align-items:start;
+    flex-direction: column;
+}
+
+#name {
+    font-size: 30px;
+    margin-bottom: 0px;
+}
