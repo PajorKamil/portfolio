@@ -1,76 +1,127 @@
-var display = document.getElementById("display");
-var clear = document.getElementById("clear");
-var equal = document.getElementById("equal");
-var number = document.querySelectorAll(".button");
-var operator = document.querySelectorAll(".operator");
-var point = document.getElementById("point");
-var test2 = false;
-var equal_clicked = false;
-var sign = "";
+const display = document.getElementById("display");
+const clear = document.getElementById("clear");
+const equal = document.getElementById("equal");
+const number = document.querySelectorAll(".number");
+const operator = document.querySelectorAll(".operator");
+const change_sign = document.querySelector("#change_sign");
+const percent = document.querySelector("#percent");
+var operatorclicked = false;
+var result = 0;
 var numa = 0;
 var numb = 0;
-var remembered_num;
+let dotAdded = false;
 
-number.forEach(function(element) {
-    element.addEventListener("click", function() {
+number.forEach(element => {
+    element.addEventListener("click", function(){
         var clicked = this.textContent;
-        if(equal_clicked == true){
+        if (clicked === '.' && dotAdded) {
+            return;
+        }
+        if(operatorclicked == true){
             display.value = clicked;
-            equal_clicked = false;
+            operatorclicked = false
         }else{
             display.value += clicked;
         }
-    });
-});
-
-operator.forEach(function(element) {
-    element.addEventListener("click", function() {
-        sign = this.textContent;
-        if(sign === "^"){
-            sign = "**";
-        }else if(sign === "%"){
-            sign = "*0.01*";
+        if (clicked === '.') {
+            dotAdded = true;
         }
-        numa = Number(display.value);
-        var clicked = "";
-        display.value = clicked;
-        test2 = true;
-    });
+    })
 });
 
-equal.addEventListener("click", function() {    
-    numb = Number(display.value);
-    if(test2 == true){
-        remembered_num = numb;
-    }
-    if(sign === ""){
-        display.value = numb
-        test2 = false;
+change_sign.addEventListener("click", function(){
+    if(display.value === "."){
+        return
     }else{
-        if(numb == ""){
-            numa = parseFloat(eval((numa +sign+ numa)).toFixed(2));
-        }else{
-            numa = parseFloat(eval((numa +sign+ remembered_num)).toFixed(2));
-            
-        }
-        display.value = numa;
-            test2 = false;
+        display.value = display.value * -1
     }
-    equal_clicked = true;
+    
+})
+
+percent.addEventListener("click", function(){
+    if(display.value === "."){
+        return
+    }else{
+        display.value = display.value * 0.01
+    }
+    
+})
+
+operator.forEach(element => {
+    element.addEventListener("click", function(){
+        operatorclicked = true;
+        dotAdded = false;
+        sign = this.textContent;
+        numa = parseFloat(display.value);
+        console.log("sign: "+sign);
+
+        if(sign === "+/-"){
+            display.value = numa * -1;
+        }
+    })
+});
+
+function numDigitsAfterDecimal(x) {
+    var afterDecimalStr = x.toString().split('.')[1] || ''
+    return afterDecimalStr.length
+}
+
+function calculate(){
+    switch(sign){
+        case "+":
+            result = numa + numb;
+            var numalenght = numDigitsAfterDecimal(numa);
+            var numblenght = numDigitsAfterDecimal(numb);
+            if(numalenght > numblenght){
+                result = result.toFixed(numalenght);
+            }else{
+                result = result.toFixed(numblenght);
+            }
+            break;
+        case "-":
+            result = numa - numb;
+            if(result != 0){
+                var numalenght = numDigitsAfterDecimal(numa);
+                var numblenght = numDigitsAfterDecimal(numb);
+                if(numalenght > numblenght){
+                    result = result.toFixed(numalenght);
+                }else{
+                    result = result.toFixed(numblenght);
+                }
+            }
+            break;
+        case "*":
+            result = numa * numb;
+            var numalenght = numDigitsAfterDecimal(numa);
+            var numblenght = numDigitsAfterDecimal(numb);
+            result = parseFloat(result.toFixed(numalenght+numblenght));
+            break;
+        case "/":
+            if(numb == 0){
+                result = "Error";
+            }else{
+                result = numa / numb;
+                if(numblenght = 1){
+                    result = parseFloat(result.toFixed(1));
+                }
+            }
+            break;
+        default:
+            console.log('Error');
+    }
+}
+
+equal.addEventListener("click", function(){
+    numb = parseFloat(display.value);
+    console.log("Numb: "+numb);
+    calculate();
+    display.value = result
 });
 
 clear.addEventListener("click", function() {
-    var clearclicked = "";
-    display.value = clearclicked;
+    display.value = '';
     numa = "";
     numb = "";
     sign = "";
+    dotAdded = false;
 });
-
-point.addEventListener("click", function() {
-    pointclicked = ".";
-    display.value += pointclicked;
-});
-
-
-
