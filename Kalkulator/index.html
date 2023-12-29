@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/calculator.js" defer></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6230001277868387"
-     crossorigin="anonymous"></script>
     <title>Kalkulator</title>
     
 </head>
@@ -14,38 +12,36 @@
     <div class="container">
         <div class="calculator">
             <div class="display">
-                <input type="text" class="outcome" id="display" disabled>
-
-                </input>
+                <input type="text" class="outcome" id="display" disabled></input>
             </div>
             <table>
                 <tr>
                     <td id="clear">AC</td>
-                    <td class="operator">%</td>
-                    <td class="operator">^</td>
+                    <td id="change_sign">+/-</td>
+                    <td id="percent">%</td>
                     <td class="operator">/</td>
                 </tr>
                 <tr>
-                    <td class="button">7</td>
-                    <td class="button">8</td>
-                    <td class="button">9</td>
+                    <td class="number">7</td>
+                    <td class="number">8</td>
+                    <td class="number">9</td>
                     <td class="operator">*</td>
                 </tr>
                 <tr>
-                    <td class="button">4</td>
-                    <td class="button">5</td>
-                    <td class="button">6</td>
-                    <td class="operator">+</td>
-                </tr>
-                <tr>
-                    <td class="button">1</td>
-                    <td class="button">2</td>
-                    <td class="button">3</td>
+                    <td class="number">4</td>
+                    <td class="number">5</td>
+                    <td class="number">6</td>
                     <td class="operator">-</td>
                 </tr>
                 <tr>
-                    <td class="button" colspan="2" style="border-radius: 0 0 0 20px;">0</td>
-                    <td id="point">.</td>
+                    <td class="number">1</td>
+                    <td class="number">2</td>
+                    <td class="number">3</td>
+                    <td class="operator">+</td>
+                </tr>
+                <tr>
+                    <td class="number" colspan="2" style="border-radius: 0 0 0 20px;">0</td>
+                    <td class="number">.</td>
                     <td id="equal" style="border-radius: 0 0 20px 0;">=</td>
                 </tr>
             </table>
