@@ -52,7 +52,7 @@ body {
 
 .container {
     width: calc(100vw - 5px);
-    height: calc(100vh - 5.5em - 5px);;
+    height: calc(100% - 5.5em - 5px);;
     display: flex;
 }
 
