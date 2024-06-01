@@ -43,7 +43,7 @@
 body {
     width: 100vw;
     margin: 0px;
-    height: 80vh;
+    height: 100vh;
     margin-top: 5px;
     padding: 0;
     background-color: black;
@@ -52,7 +52,7 @@ body {
 
 .container {
     width: calc(100vw - 5px);
-    height: calc(80vh - 5.5em - 5px);;
+    height: calc(100vh - 5.5em - 5px);;
     display: flex;
 }
 
