@@ -953,6 +953,7 @@ th > img {
     }
     .header > img {
         width: 6em;
+        margin: 20px 20px 20px 0px
     }
 }
 
