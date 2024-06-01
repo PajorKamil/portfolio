@@ -196,6 +196,7 @@ body {
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
+    padding: 1em;
     z-index: 0;
 }
 
