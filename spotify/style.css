@@ -196,7 +196,6 @@ body {
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 1em;
     z-index: 0;
 }
 
@@ -953,10 +952,10 @@ th > img {
     }
     .header > img {
         width: 6em;
-        margin: 20px 20px 20px 0px
+        margin: 20px 20px 20px 10px
     }
     .header {
-        padding-left: 1em;
+        padding-left: 2em;
     }
 }
 
