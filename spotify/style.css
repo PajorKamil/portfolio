@@ -46,7 +46,7 @@ body {
     height: 100%;
     margin-top: 5px;
     padding: 0;
-    background-color: black;
+    background-color: red;
     overflow: hidden;
 }
 
@@ -152,7 +152,7 @@ body {
 
 .nav2 {
     width: 100%;
-    height: calc(100% - 6em);
+    height: calc(100% - 3.7em);
     border-radius: .5em;
     background-color: rgb(18, 18, 18);
     display: flex;
@@ -190,7 +190,7 @@ body {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(18,18,18,1) 20%, rgb(44, 44, 44) 80%);
     width: calc(100% - 5em);
-    height: calc(100% - 5em);
+    height: calc(100% - 2.6em);
     border-radius: .5em;
     display: flex;
     align-items: center;
@@ -205,7 +205,7 @@ body {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(127,114,230,1) 100%);
     width: calc(100% - 5em);
-    height: calc(100% - 5em);
+    height: calc(100% - 2.6em);
     border-radius: .5em;
     display: flex;
     align-items: center;
@@ -559,10 +559,11 @@ body {
 
 .footer {
     width: 100%;
-    height: 8em;
+    height: 6em;
     background-color: black;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 99;
     position: fixed;
     bottom: 0px;
@@ -738,7 +739,7 @@ body {
     justify-content: start;
     align-items: start;
     padding: 1em;
-    padding-left: 5em;
+    padding-left: 2em;
     color: white;
 }
 
@@ -937,6 +938,9 @@ th > img {
     .header > img {
         width: 10em;
     }
+    .header {
+        padding-left: 1em;
+    }
 }
 
 @media screen and (max-width: 620px) {    
@@ -945,6 +949,9 @@ th > img {
     }
     .header > img {
         width: 8em;
+    }
+    .header {
+        padding-left: 0;
     }
 }
 
