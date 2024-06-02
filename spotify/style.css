@@ -562,7 +562,7 @@ body {
     display: flex;
     justify-content: space-between;
     z-index: 99;
-    position: absolute;
+    position: fixed;
 }
 
 .song {
