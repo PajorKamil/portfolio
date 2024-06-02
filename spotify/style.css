@@ -43,7 +43,7 @@
 body {
     width: 100vw;
     margin: 0px;
-    height: 100vh;
+    height: 100%;
     margin-top: 5px;
     padding: 0;
     background-color: black;
@@ -52,13 +52,13 @@ body {
 
 .container {
     width: calc(100vw - 5px);
-    height: calc(100vh - 5.5em - 5px);;
+    height: calc(100% - 5.5em - 5px);;
     display: flex;
 }
 
 .nav-main {
     width: 4.5em;
-    height: calc(100vh - 5.5em);
+    height: calc(100% - 5.5em);
     border-radius: .5em;
     margin: 0 .5em;
 }
@@ -202,7 +202,7 @@ body {
 
 .main2 {
     background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 9%, rgba(127,114,230,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(127,114,230,1) 100%);
     width: calc(100% - 5em);
     height: calc(100% - 2em);
     border-radius: .5em;
@@ -801,7 +801,7 @@ td {
 }
 
 .tr:hover {
-    background-color: rgb(88, 88, 88);
+    background-color: rgba(133, 133, 133, 0.466);
 }
 
 .title-list {
