@@ -189,7 +189,7 @@ body {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(18,18,18,1) 20%, rgb(44, 44, 44) 80%);
     width: calc(100% - 5em);
-    height: calc(100vh - 7.8em);
+    height: calc(100% - 2em);
     border-radius: .5em;
     display: flex;
     align-items: center;
@@ -204,13 +204,14 @@ body {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 9%, rgba(127,114,230,1) 100%);
     width: calc(100% - 5em);
-    height: calc(100vh - 7.8em);
+    height: calc(100% - 2em);
     border-radius: .5em;
     display: flex;
     align-items: center;
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
+    padding: 1em;
     z-index: 0;
 }
 
