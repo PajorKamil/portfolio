@@ -55,8 +55,8 @@ body {
 }
 
 svg {
-    padding: 1.2rem;
-    border-radius: .7em;
+    padding: 1.2em;
+    border-radius: 50%;
     cursor: pointer;
 }
 
