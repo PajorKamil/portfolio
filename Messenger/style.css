@@ -534,9 +534,9 @@ svg:hover:not(.user > svg, .active, .new, .loup, .call-icon, .input-icon, .emoji
 /* MOBILE */
 
 @media screen and (max-width: 535px) {
-    .svg {
+    svg {
         overflow: visible;
-        border-radius: 0;
+        
     }
     .nav {
         display: none;
