@@ -58,6 +58,7 @@ svg {
     padding: 1.2em;
     border-radius: .7em;
     cursor: pointer;
+    overflow: visible;
 }
 
 svg:hover:not(.user > svg, .active, .new, .loup, .call-icon, .input-icon, .emoji, .like){
