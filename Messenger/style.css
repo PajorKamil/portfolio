@@ -26,6 +26,10 @@ body {
     font-size:62.5%
 }
 
+.back > svg {
+    transform: scaleX(-1);
+}
+
 /* MENU */
 
 .nav {
