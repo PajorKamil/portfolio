@@ -280,10 +280,18 @@ footer > h1 > img {
     color: white;
 }
 
+.dark-mode .mobile {
+    background-color: #181A1B;
+}
+
+.dark-mode .hamburger{
+    filter: invert(100%);
+}
+
 .switch {
     position: relative;
     display: inline-block;
-    width: 40px;
+    width: 26px;
     height: 25px;
     margin-left: .5em;
   }
@@ -306,6 +314,10 @@ footer > h1 > img {
     transition: .4s;
   }
   
+  .dark-mode .slider {
+    background-color: #ffd700;
+  }
+
   .slider:before {
     position: absolute;
     content: "";
@@ -317,22 +329,27 @@ footer > h1 > img {
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
-  input:checked + .slider {
-    background-color: gold;
+
+  .sun {
+    display: none;
+    cursor: pointer;
+    margin-left: 1em;
   }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px gold;
+
+  .moon {
+    display: block;
+    cursor: pointer;
+    margin-left: 1em;
   }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(14px);
+
+  .dark-mode .sun {
+    display: block;
   }
-  
-  /* Rounded sliders */
+
+  .dark-mode .moon {
+    display: none;
+  }
+
   .slider.round {
     border-radius: 34px;
   }
@@ -413,7 +430,7 @@ footer > h1 > img {
     
   }
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 600px) {
     .head {
         height: 800px;
         flex-direction: column;
@@ -502,5 +519,10 @@ footer > h1 > img {
 
     .desktop {
         display: none;
+    }
+
+    .sun,
+    .moon {
+        margin: 0px;
     }
   }
